@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Days - Crafting Remarkable Online Presence for Every Occasion</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+  :root {
+    --primary-color: #6a4c93;
+    --secondary-color: #f8b400;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --accent-color: #8e1a93;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--secondary-color);
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .hero {
+    background: linear-gradient(rgba(106, 76, 147, 0.8), rgba(106, 76, 147, 0.8)), url('https://source.unsplash.com/random/1600x900/?event') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+
+  .mission {
+    background-color: #fff;
+    padding: 80px 0;
+  }
+
+  .mission-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .mission-text {
+    flex: 1;
+    font-weight: 600;
+  }
+
+  .mission h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+
+  .mission-image {
+    flex: 1;
+    text-align: center;
+  }
+
+  .mission-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .services {
+    padding: 80px 0;
+    background-color: var(--bg-color);
+  }
+
+  .services h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+  }
+
+  .services-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .service-card i {
+    font-size: 48px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+
+  .contact {
+    padding: 80px 0;
+    background-color: #fff;
+  }
+
+  .contact h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .contact-info {
+    flex: 1;
+    font-weight: 800;
+  }
+
+  .contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+
+  .contact-info p {
+    margin-bottom: 15px;
+  }
+
+  .contact-form {
+    flex: 1;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .form-group textarea {
+    height: 150px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: var(--accent-color);
+  }
+
+  footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    .nav-links {
+      position: fixed;
+      right: -100%;
+      top: 70px;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
+      right: 0;
+    }
+
+    .nav-links a {
+      margin: 2.5rem 0;
+    }
+
+    .mission-content {
+      flex-direction: column;
+    }
+
+    .contact-content {
+      flex-direction: column;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    .mission h2,
+    .services h2,
+    .contact h2 {
+      font-size: 30px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Event Days</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#mission">Our Mission</a>
+          <a href="#services">What We Do</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Crafting Remarkable Online Presence for Every Occasion</h1>
+        <p>At Event Days, we believe every occasion deserves a stunning digital showcase. Let us bring your event to life online.</p>
+        <a href="#contact" class="cta-button">Start Your Event Journey</a>
+      </div>
+    </section>
+
+    <section id="mission" class="mission">
+      <div class="container">
+        <div class="mission-content">
+          <div class="mission-text">
+            <h2>Our Mission</h2>
+            <p>At Event Days, we believe every occasion deserves a remarkable online presence. Our mission is to help you create stunning event websites that ignite excitement, streamline planning, and leave a lasting impression.</p>
+          </div>
+          <div class="mission-image">
+            <img src="event-website-example.webp" alt="Multiple event website examples stacked and displayed on various devices" width="600" height="400">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <h2>What We Do</h2>
+        <p class="services-intro">We specialize in creating custom event websites for a variety of memorable occasions. Our tailored approach ensures that each site perfectly captures the essence of your unique event.</p>
+        <div class="service-grid">
+          <div class="service-card">
+            <i class="fas fa-users"></i>
+            <h3>Conferences</h3>
+            <p>Organize and promote your conference with a professional, feature-rich site.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-ring"></i>
+            <h3>Weddings</h3>
+            <p>Celebrate your love story with a beautiful, personalized wedding website.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-birthday-cake"></i>
+            <h3>Birthdays</h3>
+            <p>Make your birthday bash unforgettable with an exciting online presence.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-baby-carriage"></i>
+            <h3>Baby Showers</h3>
+            <p>Welcome your little one with a charming and informative baby shower site.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-glass-cheers"></i>
+            <h3>Parties</h3>
+            <p>Set the mood for your party with an engaging and interactive website.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-star"></i>
+            <h3>Other Events</h3>
+            <p>No matter the occasion, we'll create a website that makes your event shine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Event Street, Celebration City, EC 12345</p>
+            <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@eventdays.com</p>
+            <p><i class="fas fa-clock"></i> Monday - Friday: 9am - 5pm</p>
+            <div class="social-media">
+              <a href="https://facebook.com/eventdays" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/eventdays" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://instagram.com/eventdays" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://linkedin.com/company/eventdays" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required="">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required="">
+              </div>
+              <div class="form-group">
+                <label for="event-type">Event Type</label>
+                <input type="text" id="event-type" name="event-type" required="">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required=""></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-envelope"></i> support@theappslabz.com</p>
+            <p><i class="fas fa-clock"></i> Monday - Friday: 9am - 5pm</p>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Event Days. Crafting unforgettable online experiences for every occasion.</p>
+    </div>
+  </footer>
+
+ <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
+    });
+
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  </script>
+</body></html>
